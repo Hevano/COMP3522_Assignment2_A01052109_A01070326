@@ -4,8 +4,15 @@ import abc
 class ProductFactory(abc.ABC):
 
     def create(self, order):
-        # code here to choose which factory
-        pass
+        if order.factory is "ChristmasProductFactory":
+            self.create_toy(order)
+        elif order.factory is "EasterProductFactory":
+            self.create_stuffed_animal(order)
+        else:
+            self.create_candy(order)
+
+
+
     @abc.abstractmethod
     def create_toy(self, order):
         pass
