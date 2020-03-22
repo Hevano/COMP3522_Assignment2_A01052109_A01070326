@@ -3,17 +3,10 @@ from order import Order
 
 
 class OrderProcessor:
-    '''
     FACTORIES = {"Christmas": ChristmasProductFactory, "Easter": EasterProductFactory,
                  "Halloween": HalloweenProductFactory}
     ITEMS = {"Toy": Toy, "Candy": Candy,
                  "StuffedAnimal": StuffedAnimal}
-    '''
-
-    FACTORIES = {"Christmas": int, "Easter": str,
-                 "Halloween": float}
-    ITEMS = {"Toy": int, "Candy": str,
-             "StuffedAnimal": float}
 
     def __init__(self, path):
         self.dataFrame = pandas.read_excel(path, index_col=0);
