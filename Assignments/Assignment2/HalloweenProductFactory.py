@@ -1,4 +1,7 @@
 from ProductFactory import ProductFactory
+from DancingSkeleton import DancingSkeleton
+from RCSpider import RCSpider
+from PumpkinCaramelToffee import PumpkinCaramelToffee
 
 
 class HalloweenProductFactory(ProductFactory):

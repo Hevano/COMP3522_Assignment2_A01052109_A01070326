@@ -1,4 +1,7 @@
 from ProductFactory import ProductFactory
+from SantasWorkshop import SantasWorkshop
+from Reindeer import Reindeer
+from CandyCanes import CandyCanes
 
 
 class ChristmasProductFactory(ProductFactory):
@@ -42,7 +45,7 @@ class ChristmasProductFactory(ProductFactory):
         keys = [details['nuts'], details['lactose'], details['name'], details['desc'], details['stripes']]
         properties = {key: value for key, value in order.details.items() if key in keys}
 
-        return CandyCane(product_id, properties)
+        return CandyCanes(product_id, properties)
 
 
 

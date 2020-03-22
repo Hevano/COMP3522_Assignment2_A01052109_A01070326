@@ -4,6 +4,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/tempdelete" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Assignment2/Assignment2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Assignments/Assignment2" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
