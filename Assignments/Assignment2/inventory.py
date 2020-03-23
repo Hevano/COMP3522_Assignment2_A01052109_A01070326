@@ -1,4 +1,5 @@
 from order import Order
+from Item import Item
 
 
 class Inventory:
