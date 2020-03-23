@@ -7,12 +7,14 @@ from StuffedAnimal import StuffedAnimal
 class ProductFactory(abc.ABC):
 
     def create(self, order):
+        item = None
         if order.item is Toy:
-            self.create_toy(order)
+            item = self.create_toy(order)
         elif order.item is StuffedAnimal:
-            self.create_stuffed_animal(order)
+            item = self.create_stuffed_animal(order)
         else:
-            self.create_candy(order)
+            item = self.create_candy(order)
+        return item
 
 
 

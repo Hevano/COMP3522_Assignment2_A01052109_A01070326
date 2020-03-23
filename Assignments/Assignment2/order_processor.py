@@ -25,7 +25,7 @@ class OrderProcessor:
             qty = o.quantity
             name = o.name
             id = o.product_id
-            remove = ["Index", "holiday", "item", "quantity", "name", "product_id"]
+            remove = ["Index", "holiday", "item", "quantity", "product_id"]
             details = {key: value for key, value in o._asdict().items() if key not in remove}
             yield Order(factory, ordNo, id, item, name, qty, details)
 

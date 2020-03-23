@@ -12,8 +12,7 @@ class ChristmasProductFactory(ProductFactory):
         # name = order.details.get('name')
         # desc = order.details.get('desc')
         # dimensions = order.details.get('dimensions')
-        product_id = order.details.get('productID')
-
+        product_id = order.product_id
         # collects details of orders
         keys = ['hasBatteries', 'min_age', 'name', 'desc', 'dimensions']
         properties = {key: value for key, value in order.details.items() if key in keys}
@@ -28,7 +27,7 @@ class ChristmasProductFactory(ProductFactory):
         # name = order.details.get('name')
         # desc = order.details.get('desc')
         # nose_glow = order.details.get('noseGlow')
-        product_id = order.details.get('productID')
+        product_id = order.product_id
 
         # collects details of orders
         keys = ['stuffing', 'size', 'fabric', 'name', 'desc', 'has_glow']
@@ -37,9 +36,9 @@ class ChristmasProductFactory(ProductFactory):
         return Reindeer(product_id, properties=properties)
 
     def create_candy(self, order):
-        product_id = order.details.get('productID')
+        product_id = order.product_id
         # collects details of orders
-        keys = ['has_nuts', 'has_lactose', 'has_lactose', 'desc', 'stripes']
+        keys = ['has_nuts', 'has_lactose', 'has_lactose', 'desc', 'stripes', 'name']
         properties = {key: value for key, value in order.details.items() if key in keys}
 
         return CandyCanes(product_id, properties=properties)

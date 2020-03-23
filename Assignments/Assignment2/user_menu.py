@@ -28,9 +28,6 @@ class UserMenu:
 
         print("Closing program...")
 
-
-
-
     def process_web_orders(self):
         print("Please input the path of your order file")
         while True:
@@ -42,7 +39,7 @@ class UserMenu:
 
     def check_inventory(self):
         for item in self.store.check_inventory():
-            print(f"{item[3].value()} | {item[0]} | {item[1]} | {item[2]}")
+            print(f"{item[3].value} | {item[0]} | {item[1]} | {item[2]}")
 
 
 menu = UserMenu()
