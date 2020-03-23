@@ -19,10 +19,10 @@ class UserMenu:
             choice = ""
             while True:
                 choice = input()
-                if choice == "0" or choice in self.menu_items:
+                if choice == "3" or choice in self.menu_items:
                     break
                 print(f"{choice} is not a valid choice")
-            if choice == "0":
+            if choice == "3":
                 break
             self.menu_items[choice]()
 
