@@ -8,4 +8,6 @@ class Order:
         self.quantity = quantity
         self.details = details
         self.product_id = id
+        self.details['error'] = ""
+        self.details['corrupted'] = False
 

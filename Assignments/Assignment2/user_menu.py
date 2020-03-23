@@ -42,7 +42,11 @@ class UserMenu:
             print(f"{item[3].value} | {item[0]} | {item[1]} | {item[2]}")
 
 
-menu = UserMenu()
-menu.main_menu()
+
+
+if __name__ == '__main__':
+    menu = UserMenu()
+    menu.main_menu()
+
 
 
