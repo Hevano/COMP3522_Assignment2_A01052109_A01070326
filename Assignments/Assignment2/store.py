@@ -12,7 +12,6 @@ class Store:
         self.inventory = Inventory()
         self.logger = None
 
-
     def take_order(self, order):
         if order.product_id not in self.inventory.items.keys():
             factory = order.factory()
@@ -66,4 +65,3 @@ class Store:
             else:
                 text_file.write(f"\nOrder {o.orderNo}, Could not process order data was corrupted, InvalidDataError -"
                                 f"{o.details['error']}")
-

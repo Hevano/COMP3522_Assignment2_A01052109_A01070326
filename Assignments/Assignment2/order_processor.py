@@ -28,6 +28,3 @@ class OrderProcessor:
             remove = ["Index", "holiday", "item", "quantity", "product_id"]
             details = {key: value for key, value in o._asdict().items() if key not in remove}
             yield Order(factory, ordNo, id, item, name, qty, details)
-
-
-

@@ -16,9 +16,6 @@ class ProductFactory(abc.ABC):
             item = self.create_candy(order)
         return item
 
-
-
-
     @abc.abstractmethod
     def create_toy(self, order):
         pass

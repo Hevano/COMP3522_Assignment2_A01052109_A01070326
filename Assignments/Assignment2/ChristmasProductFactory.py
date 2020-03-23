@@ -83,17 +83,3 @@ class ChristmasProductFactory(ProductFactory):
             return "colour must be Red or Green"
 
         return "false"
-
-
-
-
-
-
-
-
-
-
-
-
-
-

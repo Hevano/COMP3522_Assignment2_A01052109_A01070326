@@ -12,14 +12,11 @@ class EasterProductFactory(ProductFactory):
         keys = ['hasBatteries', 'min_age', 'name', 'desc', 'num_sound', 'colour']
         properties = {key: value for key, value in order.details.items() if key in keys}
 
-
-
         order.details['error'] = self.toy_exception(properties)
         if order.details['error'] != "false":
             order.details['corrupted'] = True
 
         return RobotBunny(product_id, properties=properties)
-
 
     def create_stuffed_animal(self, order):
         product_id = order.product_id
@@ -27,7 +24,6 @@ class EasterProductFactory(ProductFactory):
         keys = ['stuffing', 'size', 'fabric', 'name', 'desc', 'colour']
         properties = {key: value for key, value in order.details.items() if key in keys}
         exception = self.stuffed_animal_exception(properties)
-
 
         order.details['error'] = self.stuffed_animal_exception(properties)
         if order.details['error'] != "false":
@@ -46,7 +42,6 @@ class EasterProductFactory(ProductFactory):
             order.details['corrupted'] = True
 
         return CremeEggs(product_id, properties=properties)
-
 
     def toy_exception(self, properties):
         if properties['min_age'] < 0:
@@ -78,9 +73,3 @@ class EasterProductFactory(ProductFactory):
 
     def candy_exception(self, properties):
         return "false"
-
-
-
-
-
-

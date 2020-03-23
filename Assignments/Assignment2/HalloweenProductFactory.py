@@ -19,7 +19,6 @@ class HalloweenProductFactory(ProductFactory):
 
         return RCSpider(product_id, properties=properties)
 
-
     def create_stuffed_animal(self, order):
         product_id = order.product_id
         # collects details of orders
@@ -33,7 +32,6 @@ class HalloweenProductFactory(ProductFactory):
             order.details['corrupted'] = True
 
         return DancingSkeleton(product_id, properties=properties)
-
 
     def create_candy(self, order):
         product_id = order.product_id
@@ -76,9 +74,3 @@ class HalloweenProductFactory(ProductFactory):
     def candy_exception(self, properties):
         if properties['variety'] != 'Sea Salt' and properties['variety'] != 'Regular':
             return "variety Sea Salt or Regular"
-
-
-
-
-
-
