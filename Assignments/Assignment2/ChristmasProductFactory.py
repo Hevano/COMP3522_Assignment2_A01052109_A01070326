@@ -13,13 +13,12 @@ class ChristmasProductFactory(ProductFactory):
         # desc = order.details.get('desc')
         # dimensions = order.details.get('dimensions')
         product_id = order.details.get('productID')
-        details = order.details
 
         # collects details of orders
-        keys = [details['hasBatteries'], details['age'], details['name'], details['desc'], details['dimensions']]
+        keys = ['hasBatteries', 'min_age', 'name', 'desc', 'dimensions']
         properties = {key: value for key, value in order.details.items() if key in keys}
 
-        return SantasWorkshop(product_id, properties)
+        return SantasWorkshop(product_id, properties=properties)
 
     def create_stuffed_animal(self, order):
 
@@ -30,22 +29,20 @@ class ChristmasProductFactory(ProductFactory):
         # desc = order.details.get('desc')
         # nose_glow = order.details.get('noseGlow')
         product_id = order.details.get('productID')
-        details = order.details
 
         # collects details of orders
-        keys = [details['stuffing'], details['size'], details['fabric'], details['name'], details['desc'], details['noseGlow']]
+        keys = ['stuffing', 'size', 'fabric', 'name', 'desc', 'has_glow']
         properties = {key: value for key, value in order.details.items() if key in keys}
 
-        return Reindeer(product_id, properties)
+        return Reindeer(product_id, properties=properties)
 
     def create_candy(self, order):
         product_id = order.details.get('productID')
-        details = order.details
         # collects details of orders
-        keys = [details['nuts'], details['lactose'], details['name'], details['desc'], details['stripes']]
+        keys = ['has_nuts', 'has_lactose', 'has_lactose', 'desc', 'stripes']
         properties = {key: value for key, value in order.details.items() if key in keys}
 
-        return CandyCanes(product_id, properties)
+        return CandyCanes(product_id, properties=properties)
 
 
 

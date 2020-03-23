@@ -1,6 +1,7 @@
 import order
 from order_processor import OrderProcessor
 from stock_enum import StockEnum
+from inventory import Inventory
 
 class Store:
     def __init__(self):

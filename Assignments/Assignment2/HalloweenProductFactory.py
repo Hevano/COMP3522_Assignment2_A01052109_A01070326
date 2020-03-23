@@ -8,29 +8,26 @@ class HalloweenProductFactory(ProductFactory):
 
     def create_toy(self, order):
         product_id = order.details.get('productID')
-        details = order.details
         # collects details of orders
-        keys = [details['hasBatteries'], details['age'], details['name'], details['desc'], details['speed'],
-                details['jump_height'], details['does_glow'], details['type']]
+        keys = ['has_batteries', 'min_age', 'name', 'desc', 'speed',
+                'jump_height', 'has_glow', 'type', 'spider_type']
         properties = {key: value for key, value in order.details.items() if key in keys}
 
-        return RCSpider(product_id, properties)
+        return RCSpider(product_id, properties=properties)
 
     def create_stuffed_animal(self, order):
         product_id = order.details.get('productID')
-        details = order.details
         # collects details of orders
-        keys = [details['stuffing'], details['size'], details['fabric'], details['name'], details['desc'],
-                details['does_glow']]
+        keys = ['stuffing', 'size', 'fabric', 'name', 'desc',
+                'has_glow', 'jump_height']
         properties = {key: value for key, value in order.details.items() if key in keys}
 
-        return DancingSkeleton(product_id, properties)
+        return DancingSkeleton(product_id, properties=properties)
 
     def create_candy(self, order):
         product_id = order.details.get('productID')
-        details = order.details
         # collects details of orders
-        keys = [details['nuts'], details['lactose'], details['name'], details['desc'], details['variety']]
+        keys = ['nuts', 'lactose', 'name', 'desc', 'variety']
         properties = {key: value for key, value in order.details.items() if key in keys}
 
-        return PumpkinCaramelToffee(product_id, properties)
+        return PumpkinCaramelToffee(product_id, properties=properties)

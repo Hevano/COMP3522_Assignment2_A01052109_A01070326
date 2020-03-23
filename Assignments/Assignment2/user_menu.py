@@ -5,7 +5,7 @@ import pathlib
 class UserMenu:
     def __init__(self):
         self.store = Store()
-        self.menu_items = {"1": process_web_orders, "2": check_inventory}
+        self.menu_items = {"1": self.process_web_orders, "2": self.check_inventory}
 
     def print_options(self):
         print("Main Menu")
@@ -15,11 +15,11 @@ class UserMenu:
 
     def main_menu(self):
         while True:
-            print_options()
+            self.print_options()
             choice = ""
             while True:
                 choice = input()
-                if choice == "0" or choice in menu_items:
+                if choice == "0" or choice in self.menu_items:
                     break
                 print(f"{choice} is not a valid choice")
             if choice == "0":
@@ -43,5 +43,9 @@ class UserMenu:
     def check_inventory(self):
         for item in self.store.check_inventory():
             print(f"{item[3].value()} | {item[0]} | {item[1]} | {item[2]}")
+
+
+menu = UserMenu()
+menu.main_menu()
 
 

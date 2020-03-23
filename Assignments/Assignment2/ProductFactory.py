@@ -1,12 +1,15 @@
 import abc
+from Toy import Toy
+from Candy import Candy
+from StuffedAnimal import StuffedAnimal
 
 
 class ProductFactory(abc.ABC):
 
     def create(self, order):
-        if order.factory is "ChristmasProductFactory":
+        if order.item is Toy:
             self.create_toy(order)
-        elif order.factory is "EasterProductFactory":
+        elif order.item is StuffedAnimal:
             self.create_stuffed_animal(order)
         else:
             self.create_candy(order)

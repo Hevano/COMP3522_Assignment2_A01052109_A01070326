@@ -1,5 +1,11 @@
 import pandas
 from order import Order
+from ChristmasProductFactory import ChristmasProductFactory
+from EasterProductFactory import EasterProductFactory
+from HalloweenProductFactory import HalloweenProductFactory
+from Toy import Toy
+from Candy import Candy
+from StuffedAnimal import StuffedAnimal
 
 
 class OrderProcessor:
