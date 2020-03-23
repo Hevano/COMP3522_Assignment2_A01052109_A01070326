@@ -1,5 +1,6 @@
 from order import Order
 
+
 class Inventory:
     def __init__(self):
         self.items = {}
